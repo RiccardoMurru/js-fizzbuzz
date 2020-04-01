@@ -6,6 +6,9 @@
  */
 
  var number;
+ var list = document.getElementById('list');
+
+
 
  for (var i = 1; i < 101; i++ ) {
      // stampa i numeri da 1 a 100
@@ -14,18 +17,18 @@
 
     // multipli di 3 e 5: FizzBuzz
     if ((number % 3  == 0) && (number % 5 == 0)) {
-        console.log('FizzBuzz');
-        
+        list.innerHTML += '<li class="fizzbuzz">' + 'FizzBuzz' + '</li>';
+
     // multipli di 3: Fizz  
     } else if (number % 3 == 0) {
-        console.log('Fizz');
+        list.innerHTML += '<li class="fizz">' + 'Fizz' + '</li>';
 
     // multipli di 5: Buzz    
     } else if (number % 5 == 0) {
-        console.log('Buzz');
+        list.innerHTML += '<li class="buzz">' + 'Buzz' + '</li>';
         
     } else {
-        console.log(number);
+        list.innerHTML += '<li>' + number + '</li>';
         
     }
  }
